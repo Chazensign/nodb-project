@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom"
+import './ExList.css'
 
 
 class ExListDisp extends Component {
@@ -9,7 +10,11 @@ class ExListDisp extends Component {
   return ( 
     <ol>
     {filteredEx.map(ex => {
-      return <Link to={`/detview/${ex.id}`}><li>{ex.Exercise}</li></Link>
+      return (
+        <Link key={ex.id} to={`/detview/${ex.id}`}>
+          <li className='link-list'>{ex.Exercise}</li>
+        </Link>
+      )
     })}
     </ol>
    )

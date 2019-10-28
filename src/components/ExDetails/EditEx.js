@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
+import './EditEx.css'
 
 class EditEx extends Component {
-  
   render() {
- 
     let {
             Exercise,
             Equipment,
@@ -18,13 +17,13 @@ class EditEx extends Component {
             Weight
           } = this.props.toEdit 
     return ( 
-      <div>
+      <div className='edit-box'>
         <input
           name="Exercise"
           type="text"
           onChange={e => this.props.handleChange(e)}
           placeholder="Exercise Name"
-          defaultValue={Exercise}
+          value={Exercise || ""}
         />
         <input
           name="Equipment"

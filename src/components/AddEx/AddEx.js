@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './AddEx.css'
+import Button from '../ExDetails/Button'
+import Header from '../Header/Header'
 
 class AddEx extends Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class AddEx extends Component {
     .then(res => {
       this.props.history.push("/")
     })
+    .catch(error => console.log(error))
   }
   handleChange = (e) => {
     this.setState({
@@ -33,7 +36,9 @@ class AddEx extends Component {
   }
   render() { 
     return (
-      <div>
+      <div className='add-box'>
+        <Header/>
+        <div className="header-back"></div>
         <input
           name="Exercise"
           type="text"
@@ -100,7 +105,7 @@ class AddEx extends Component {
           onChange={e => this.handleChange(e)}
           placeholder="Weight"
         />
-        <button onClick={this.addExIn}>Submit</button>
+        <Button name='Submit' onClick={this.addExIn} />
       </div>
     )
   }

@@ -328,5 +328,97 @@
          "Example": "https://dl.airtable.com/Vwxt6KjRW62PrDrpTDSx_exAX6p.gif",
          "Notes": "Really good if you have lower back pain and want to do an ab workout",
          "Modifications": ""
+      },
+      {
+         "id": "30",
+         "Exercise": "Dumbell Bicep Curl",
+         "Equipment": "Dumbell",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Bicep",
+         "MinorMuscle": "",
+         "Example": "https://media.giphy.com/media/3ohs4ncqYSi7FzjJgQ/giphy.gif",
+         "Notes": "Keep your elbows sationary by your sides.",
+         "Modifications": "Supinate your hand as much as possible towards the top of the motion."
+      },
+      {
+         "id": "31",
+         "Exercise": "Bench Dips",
+         "Equipment": "Body Weight",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Tricep",
+         "MinorMuscle": "Pectoral",
+         "Example": "https://thumbs.gfycat.com/CompleteZigzagFossa-small.gif",
+         "Notes": "Focus on using the tricep all the way through the range of motion.",
+         "Modifications": "Add weight to your lap to increase resistance."
+      },
+      {
+         "id": "32",
+         "Exercise": "Bench Press",
+         "Equipment": "Bench, Barbell",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Pectoral",
+         "MinorMuscle": "Tricep",
+         "Example": "https://media0.giphy.com/media/rYq49SlUrPqhy/source.gif",
+         "Notes": "Focus on using the pectoral muscles all the way through the range of motion.",
+         "Modifications": "If you experiance shoulder pain, move your elbows in closer to your sides."
+      },
+      {
+         "id": "33",
+         "Exercise": "Incline Bicep Curl",
+         "Equipment": "Bench, Dumbell",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Bicep",
+         "MinorMuscle": "",
+         "Example": "https://workouts4fitness.files.wordpress.com/2017/05/incline-dumbbell-curls.gif?w=355",
+         "Notes": "Focus on keeping your elbows back so your upper arm stays perpendicular to the ground.",
+         "Modifications": "Alternate between both arms and one arm at a time."
+      },
+      {
+         "id": "34",
+         "Exercise": "Standing Lateral Raises",
+         "Equipment": "Dumbell",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Shoulder",
+         "MinorMuscle": "",
+         "Example": "https: //thumbs.gfycat.com/GreedyUnpleasantBlackfootedferret-size_restricted.gif",
+         "Notes": "Slightly bend your elbows and holr the position throughout the motion.  Keep your Hands and elbows even with your shoulders at the top.",
+         "Modifications": ""
+      },
+      {
+         "id": "35",
+         "Exercise": "Dumbell Shoulder Press",
+         "Equipment": "Dumbell",
+         "ExerciseType": "Weight",
+         "MajorMuscle": "Shoulder",
+         "MinorMuscle": "",
+         "Example": "https://thumbs.gfycat.com/FrequentObedientFrilledlizard-size_restricted.gif",
+         "Notes": "",
+         "Modifications": "Alternate between both arms and one arm at a time."
+      },
+      {
+         "id": "36",
+         "Exercise": "Push-Up",
+         "Equipment": "Flat Surface",
+         "ExerciseType": "Body Weight",
+         "MajorMuscle": "Pectoral",
+         "MinorMuscle": "Tricep",
+         "Example": "https://thumbs.gfycat.com/GlossySkinnyDuckbillcat-small.gif",
+         "Notes": "Keep your core, legs and butt tight, don't curve your body up or down.",
+         "Modifications": "If you experiance shoulder pain, move your elbows in closer to your sides."
+      },
+      {
+         "id": "37",
+         "Exercise": "Tricep KickBack",
+         "Equipment": "Band, dumbell, cable pully",
+         "ExerciseType": "Body Weight",
+         "MajorMuscle": "Tricep",
+         "MinorMuscle": "",
+         "Example": "https://yurielkaim.com/wp-content/uploads/2016/11/Tricep-Kickbacks.gif",
+         "Notes": "Keep your upper arm parallel to the ground and move slower.",
+         "Modifications": ""
       }
+
+      
    ]
+
+   

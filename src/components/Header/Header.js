@@ -3,17 +3,19 @@ import { Link } from 'react-router-dom'
 import './Header.css'
 
 const Header = () => {
-  return ( 
+  return (
     <header>
-      <h1>GET FIT</h1>
+      <Link to="/"><h1 style={{opacity: 1}} className="title">GET FIT</h1></Link>
       <nav>
-        {/* <Route> */}
-      <Link to='/' >Home</Link>
-      <Link to='/addex'>Add Exercise</Link>
-      {/* </Route> */}
+        <Link className="nav-link" to="/">
+          Home
+        </Link>
+        <Link className="nav-link" to="/addex">
+          Add Exercise
+        </Link>
       </nav>
-      </header>
-   );
+    </header>
+  )
 }
  
 export default Header;

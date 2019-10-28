@@ -1,9 +1,14 @@
 let exData = require('../ExData.json')
-let id = 30
+let id = 38
 
 module.exports = {
   getExByCat: (req, res) => {
-    res.status(200).send(exData.filter(ex => ex.MajorMuscle === req.params.muscle))
+    let filtered = exData.filter(ex => ex.MajorMuscle === req.query.muscle)
+    if (filtered.length > 0) {
+    res.status(200).send(filtered)
+    }else {
+      res.status(404).send("No exercises by that muscle.")
+    }
   },
 
   returnAll: (req, res) => {
@@ -13,7 +18,6 @@ module.exports = {
   deleteEx: (req, res) => {
     let index = exData.findIndex(ex => +req.params.id === +ex.id)
     exData.splice(index, 1)
-    console.log(index)
     res.sendStatus(200)
   },
 

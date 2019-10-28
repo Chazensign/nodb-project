@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import axios from 'axios'
 import {withRouter} from "react-router-dom"
+import Select from 'react-select'
+import './Landing.css'
+import Header from '../Header/Header'
 
 class Landing extends Component {
   constructor() {
@@ -30,23 +33,25 @@ class Landing extends Component {
     this.setState({ filterBy: input.value });
   }
   submit = (input) => {
-    console.log(input)
-    this.props.history.push(`/exlist/${input}`)
-   
+    this.props.history.push(`/exlist/${input.value}`)
   }
 
   render() {
     const {toList} = this.state
-    console.log()
+    const mappedOpts = toList.map(ex => {
+      return { value: ex , label: ex  }
+    })
     return (
+      <div>
+      <Header/>
       <main>
-        <select onChange={e => this.submit(e.target.value)}>
-          <option>None</option>
-          {toList.map(ex => {
-            return <option value={ex} >{ex}</option>
-          })}
-        </select>
+        <Select
+        className='selectBox'
+          options={mappedOpts}
+          onChange={this.submit}
+        />
       </main>
+      </div>
     )
   }
 }
