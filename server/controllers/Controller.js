@@ -44,7 +44,7 @@ module.exports = {
   }
   id++
   exData.push(newEx)
-  res.status(200).send(exData)
+  res.sendStatus(200)
   },
   editEx: (req, res) => {
     let index = exData.findIndex(ex => ex.id === req.params.id)

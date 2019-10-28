@@ -44,7 +44,6 @@ class ExDetails extends Component {
     this.props.history.push(`/exlist/${this.state.toDisplay.MajorMuscle}`)
   }
   render() {
-    console.log(this.props.history)
     const {
       id,
       Exercise,
@@ -95,9 +94,9 @@ class ExDetails extends Component {
             </p>
           </dl>
         </div>
-        <img src={Example} alt="Exercise example" />
+        <details><img src={Example} alt="Exercise example" /></details>
         <div className="button-cont">
-          <Button name="Edit" onClick={this.toggleEdit} />{" "}
+          <Button name="Edit" onClick={this.toggleEdit} />
           <Button name="Delete" onClick={this.deleteEx} />
           <Button name="Go Back" onClick={this.goBack} />
         </div>

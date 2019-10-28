@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import './AddEx.css'
 import Header from '../Header/Header'
 import Inputs from '../Inputs/Inputs';
 
@@ -26,18 +25,19 @@ class AddEx extends Component {
     axios
     .post("/api/exercise", this.state)
     .then(res => {
-      this.props.history.push("/")
+      console.log(res)
     })
     .catch(error => console.log(error))
   }else {alert('Exercise and Main Muscle Worked are required.')}
-
+  this.props.history.push('/')
 }
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-  render() { 
+handleChange = (e) => {
+  this.setState({
+    [e.target.name]: e.target.value
+  })
+}
+render() { 
+  
     return (
       <div className="add-box">
         <Header />
@@ -47,7 +47,6 @@ class AddEx extends Component {
           exercise={this.state}
           handleChange={this.handleChange}
         >
-          
         </Inputs>
       </div>
     )
