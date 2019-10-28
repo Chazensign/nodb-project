@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 import axios from "axios"
 import "./ExDetails.css"
-import EditEx from "./EditEx"
+// import EditEx from "./EditEx"
 import Button from "./Button"
 import Header from "../Header/Header"
+import Inputs from "../Inputs/Inputs";
 
 class ExDetails extends Component {
   constructor() {
@@ -11,6 +12,7 @@ class ExDetails extends Component {
     this.state = {
       toDisplay: {},
       displayEdit: true
+      
     }
   }
   submitChange = () => {
@@ -93,22 +95,23 @@ class ExDetails extends Component {
             </p>
           </dl>
         </div>
-          <img src={Example} alt="Exercise example" />
-          <div className="button-cont">
-            <Button name="Edit" onClick={this.toggleEdit} />{" "}
-            <Button name="Delete" onClick={this.deleteEx} />
-            <Button name="Go Back" onClick={this.goBack} />
-          </div>
+        <img src={Example} alt="Exercise example" />
+        <div className="button-cont">
+          <Button name="Edit" onClick={this.toggleEdit} />{" "}
+          <Button name="Delete" onClick={this.deleteEx} />
+          <Button name="Go Back" onClick={this.goBack} />
+        </div>
       </div>
     ) : (
       <div>
         <Header />
         <div className="header-back"></div>
-        <EditEx
+        <Inputs
+          onClick={this.submitChange}
           handleChange={this.handleChange}
-          submitChange={this.submitChange}
-          toEdit={this.state.toDisplay}
-        />
+          exercise={this.state.toDisplay}
+        >
+        </Inputs>
       </div>
     )
   }

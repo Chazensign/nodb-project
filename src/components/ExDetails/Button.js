@@ -4,7 +4,7 @@ function Button(props) {
  
   return ( 
     <>
-    <button onClick={props.onClick}>{props.name}</button>
+    <button disabled={props.disbled ? props.disbled : false} onClick={props.onClick}>{props.name}</button>
     </>
    );
 }

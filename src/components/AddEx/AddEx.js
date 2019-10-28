@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import './AddEx.css'
-import Button from '../ExDetails/Button'
 import Header from '../Header/Header'
+import Inputs from '../Inputs/Inputs';
 
 class AddEx extends Component {
   constructor(props) {
@@ -22,13 +22,16 @@ class AddEx extends Component {
      }
   }
   addExIn = () => {
+    if (this.state.Exercise && this.state.MajorMuscle) {
     axios
     .post("/api/exercise", this.state)
     .then(res => {
       this.props.history.push("/")
     })
     .catch(error => console.log(error))
-  }
+  }else {alert('Exercise and Main Muscle Worked are required.')}
+
+}
   handleChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value
@@ -36,76 +39,16 @@ class AddEx extends Component {
   }
   render() { 
     return (
-      <div className='add-box'>
-        <Header/>
+      <div className="add-box">
+        <Header />
         <div className="header-back"></div>
-        <input
-          name="Exercise"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Exercise Name"
-        />
-        <input
-          name="Equipment"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Necessary Equipment"
-        />
-        <input
-          name="ExerciseType"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Type of Exercise"
-        />
-        <input
-          name="MajorMuscle"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Main Muscle Worked"
-        />
-        <input
-          name="MinorMuscle"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Secondary Muscle Worked"
-        />
-        <input
-          name="Example"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Image/gif URL"
-        />
-        <input
-          name="Notes"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Add Notes"
-        />
-        <input
-          name="Modifications"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Add Modifications"
-        />
-        <input
-          name="Reps"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Reps"
-        />
-        <input
-          name="Sets"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Sets"
-        />
-        <input
-          name="Weight"
-          type="text"
-          onChange={e => this.handleChange(e)}
-          placeholder="Weight"
-        />
-        <Button name='Submit' onClick={this.addExIn} />
+        <Inputs
+          onClick={this.addExIn}
+          exercise={this.state}
+          handleChange={this.handleChange}
+        >
+          
+        </Inputs>
       </div>
     )
   }
