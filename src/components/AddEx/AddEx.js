@@ -20,15 +20,12 @@ class AddEx extends Component {
       Weight: null
      }
   }
-  goBack = () => {
-    this.props.history.push("/")
-  }
   addExIn = () => {
     if (this.state.Exercise && this.state.MajorMuscle) {
     axios
-    .post("/api/exercise", this.state)
-    .then(this.goBack())
-    .catch(error => console.log(error))
+      .post("/api/exercise", this.state)
+      .then(this.props.history.push("/"))
+      .catch(error => console.log(error))
   }else {alert('Exercise and Main Muscle Worked are required.')}
 }
 handleChange = (e) => {
