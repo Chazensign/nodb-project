@@ -106,7 +106,7 @@ class ExDetails extends Component {
         <Header />
         <div className="header-back"></div>
         <Inputs
-          onClick={this.submitChange}
+          whenClicked={this.submitChange}
           handleChange={this.handleChange}
           exercise={this.state.toDisplay}
         >

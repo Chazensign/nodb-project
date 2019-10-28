@@ -98,7 +98,7 @@ const Inputs = (props) => {
           placeholder="Weight"
           value={Weight || ""}
         />
-        <Button type="submit" name="Submit" onClick={props.onClick} />
+        <Button type="submit" name="Submit" onClick={props.whenClicked} />
       </form>
   )
 }
